@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 60">
+  <!-- Icon：橘色餐蓋＋雙手 -->
+  <g id="icon" fill="#FFA500">
+    <!-- 餐蓋底座 -->
+    <rect x="0" y="20" width="50" height="10" rx="5"/>
+    <!-- 餐蓋把手 -->
+    <circle cx="25" cy="20" r="3"/>
+    <!-- 左手 -->
+    <path d="M0,30 Q10,10 20,30 Z"/>
+    <!-- 右手 -->
+    <path d="M30,30 Q40,10 50,30 Z"/>
+  </g>
+
+  <!-- 品牌名稱 -->
+  <text x="70" y="40"
+        font-family="Arial, sans-serif"
+        font-size="32"
+        font-weight="bold"
+        fill="#FFA500">
+    SHARECIPE
+  </text>
+</svg>
