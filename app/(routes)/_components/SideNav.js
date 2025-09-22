@@ -10,7 +10,7 @@ import React from 'react'
 function SideNav({ toggleSideBar }) {
   const { user } = useUser();
   return (
-    <div className=' h-full p-5 '>
+    <div className=' h-full p-5 border'>
       <Image src='/Sharecipe_logo.svg' alt='logo'
         width={280}
 
