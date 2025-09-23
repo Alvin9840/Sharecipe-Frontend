@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useUser } from '@clerk/nextjs'
 import { Image, Send, Video } from 'lucide-react';
 import React, { useContext, useState } from 'react'
+import { toast } from "sonner"
 
 
 function WritePost() {
@@ -19,7 +20,25 @@ function WritePost() {
         }
         GlobalApi.createPost(data).then(resp => {
             console.log(resp);
-        })
+            setUserInputPost("");
+            if (resp) {
+                toast.custom((t) => (
+                    <div className="bg-green-500 text-white px-8 py-5 rounded w-100 flex flex-col gap-1"
+                        onClick={() => toast.dismiss(t)}>
+                        <div className="font-bold text-base">Awesome!</div>
+                        <div>Your post has been created successfully</div>
+                    </div>
+                ));
+            }
+        }).catch(err => {
+            toast.custom((t) => (
+                <div className="bg-red-500 text-white px-8 py-5 rounded w-100 flex flex-col gap-1"
+                    onClick={() => toast.dismiss(t)}>
+                    <div className="font-bold text-base">Opps!</div>
+                    <div>Some error occurred while creating your post.</div>
+                </div>
+            ));
+        });
 
     }
 
@@ -30,7 +49,7 @@ function WritePost() {
                 What's New with you? Would you want to share
                 something with the community?
             </h2>
-            <div className='p-5 border rounde-lg mt-5 bg-orange-100'>
+            <div className='p-3 border rounded-lg mt-5 bg-orange-100'>
                 <h2>Create Post</h2>
                 <div className='p-4 bg-white rounded-lg mt-2'>
                     <textarea placeholder="What's New"
