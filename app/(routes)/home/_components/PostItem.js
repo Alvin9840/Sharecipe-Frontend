@@ -19,7 +19,7 @@ function PostItem({ post }) {
                 </div>
             </div>
 
-            <div className='bg-slate-100 p-3 mt-4 rounded-lg'>
+            <div className='bg-orange-50 p-3 mt-4 rounded-lg'>
                 <h2>{post.postText}</h2>
             </div>
 
