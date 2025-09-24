@@ -7,7 +7,7 @@ import React, { useContext, useState } from 'react'
 import { toast } from "sonner"
 
 
-function WritePost() {
+function WritePost({ getAllPost }) {
     const { user } = useUser();
     const [userInputPost, setUserInputPost] = useState();
     const { userDetail, setUserDetail } = useContext(UserDetailContext);
@@ -22,6 +22,7 @@ function WritePost() {
             console.log(resp);
             setUserInputPost("");
             if (resp) {
+                getAllPost()
                 toast.custom((t) => (
                     <div className="bg-green-500 text-white px-8 py-5 rounded w-100 flex flex-col gap-1"
                         onClick={() => toast.dismiss(t)}>

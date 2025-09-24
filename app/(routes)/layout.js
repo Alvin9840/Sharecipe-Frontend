@@ -8,7 +8,7 @@ import { UserDetailContext } from '../_context/UserDetailContext'
 import Image from 'next/image'
 
 function layout({ children }) {
-  const [toggleSideBar, setToggleSideBar] = useState(true)
+  const [toggleSideBar, setToggleSideBar] = useState(false)
   const { user } = useUser();
   const { userDetail, setUserDetail } = useContext(UserDetailContext);
 
@@ -35,7 +35,6 @@ function layout({ children }) {
           <SideNav toggleSideBar={() => setToggleSideBar(false)} />
         </div>}
 
-
       <div className='md:ml-64'>
         {/* Header  */}
         <Header toggleSideBar={() => setToggleSideBar(true)} />
@@ -45,9 +44,15 @@ function layout({ children }) {
             {children}
           </div>
           {/* Right Most Section of page */}
-          <div className='p-5'>Side Section</div>
+          <div className='p-5'>
+            <Image src='/post.png' width={500} height={300}
+              className='w-full rounded-lg shadow-sm'
+              alt='post' />
+            <Image src='/post2.jpeg' width={500} height={300}
+              className='w-full rounded-lg shadow-sm mt-5'
+              alt='post' />
+          </div>
         </div>
-
       </div>
 
     </div>
