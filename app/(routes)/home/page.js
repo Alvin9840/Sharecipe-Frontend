@@ -24,7 +24,8 @@ function Home() {
       {!user ? <Banner />
         : <WritePost getAllPost={() => getAllPost()} />}
 
-      <PostList postList={postList} />
+      <PostList postList={postList}
+        updatePostList={() => getAllPost()} />
     </div>
   )
 }
