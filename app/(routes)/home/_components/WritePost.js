@@ -67,11 +67,11 @@ function WritePost({ getAllPost }) {
                     hover:bg-orange-200 p-2 rounded-lg'><Video className='h-5 w-5' /> Video </h2>
                     </div>
                     <Button
-                        className="bg-yellow-500 rounded-xl gap-2
-                hover:bg-orange-400"
+                        className="
+                         bg-yellow-500 rounded-xl gap-2 
+                         hover:bg-orange-400"
                         disabled={!userInputPost?.length}
-                        onClick={() => onCreatePost()}
-                    >
+                        onClick={() => onCreatePost()}>
                         <Send className='h-4 w-4' /> Publish</Button>
                 </div>
             </div>

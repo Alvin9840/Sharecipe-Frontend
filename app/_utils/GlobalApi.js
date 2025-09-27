@@ -13,10 +13,13 @@ const getAllPost = () => axiosClient.get('/post');
 
 const onPostLike = (postId, data) => axiosClient.put('/post/like/' + postId, data);
 
+const addComment = (data) => axiosClient.post('/comment', data);
+
 export default {
     createUser,
     getUserByEmail,
     createPost,
     getAllPost,
-    onPostLike
+    onPostLike,
+    addComment
 }
