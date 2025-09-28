@@ -54,7 +54,7 @@ function PostItem({ post, updatePostList }) {
                     <div className="bg-green-500 text-white px-8 py-5 rounded w-100 flex flex-col gap-1"
                         onClick={() => toast.dismiss(t)}>
                         <div className="font-bold text-base">Awesome!</div>
-                        <div>Your comment has been created successfully</div>
+                        <div>Comment created successfully</div>
                     </div>
                 ));
             }
@@ -119,7 +119,10 @@ function PostItem({ post, updatePostList }) {
                                 </AlertDialogCancel>
                             </AlertDialogTitle>
                             <AlertDialogDescription>
-                                <CommentList commentList={post?.comments} />
+                                <CommentList
+                                    commentList={post?.comments}
+                                    userDetail={userDetail}
+                                    updatePostList={() => updatePostList()} />
                             </AlertDialogDescription>
                         </AlertDialogHeader>
                     </AlertDialogContent>

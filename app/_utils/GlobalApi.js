@@ -15,11 +15,14 @@ const onPostLike = (postId, data) => axiosClient.put('/post/like/' + postId, dat
 
 const addComment = (data) => axiosClient.post('/comment', data);
 
+const deleteComment = (commentId) => axiosClient.delete("/comment/" + commentId)
+
 export default {
     createUser,
     getUserByEmail,
     createPost,
     getAllPost,
     onPostLike,
-    addComment
+    addComment,
+    deleteComment
 }

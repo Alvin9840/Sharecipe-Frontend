@@ -27,7 +27,7 @@ function WritePost({ getAllPost }) {
                     <div className="bg-green-500 text-white px-8 py-5 rounded w-100 flex flex-col gap-1"
                         onClick={() => toast.dismiss(t)}>
                         <div className="font-bold text-base">Awesome!</div>
-                        <div>Your post has been created successfully</div>
+                        <div>Post created successfully</div>
                     </div>
                 ));
             }
